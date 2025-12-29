@@ -3,9 +3,20 @@
 #### Description
 Hypergraph-based dual-channel improved variational autoencoder with cross-attention for compound-protein interactions identification
 
-#### 软件架构
-软件架构说明
+#### Dependencies
+Matlab >= 2024b was used to construct model for identifying compound-protein interactions.
+Python 
+dhg (https://github.com/Accenture/AmpliGraph) was employed to perform embedded learning for knowledge graph.
+torch (https://github.com/benedekrozemberczki/karateclub) was utilized to perform embedding learning for complex network.
 
+#### Instructions
+(1) Collect compound-protein interaction information, chemical SMILEs and protein sequence data from databases DrugBank and UniprotKB, and calculate molecular fingerprint descriptors and protein primary structure features.
+(2) Construct a hypergraph with compounds as vertices and proteins as hyperedges, and a hypergraph with compounds as hyperedges and proteins as vertices, based on collected compound-protein interaction data. 
+(3) Two hypergraph structures and corresponding vertex feature matrices are input into the improved hypergraph variational autoencoder, and the obtained embedded features are used to represent compounds and proteins, respectively.
+(4) Multi-head cross-attention operations are performed on the embedded features of proteins and compounds to obtain fusion features that capture their interaction information. Then, the fusion features are fed into deep neural network model to identify potential compound-protein interactions.  
+
+#### Methods
+AMCF_RDP('D019829','ALBU_HUMAN')
 
 #### 安装教程
 
