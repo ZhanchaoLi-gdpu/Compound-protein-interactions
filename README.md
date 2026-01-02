@@ -2,12 +2,16 @@
 
 #### Description
 Hypergraph-based dual-channel improved variational autoencoder with cross-attention for compound-protein interactions identification
+This repository contains the PyTorch implementation of framework, as described in our paper "Hypergraph-based dual-channel improved variational autoencoder with cross-attention for compound-protein interactions identification". The framework is a dual-channel hypergraph model with improved variational autoencoder and cross-attention mechanism to identify potential compound-protein interactions. It works on hypergraph, PubChem fingerprint descriptors of compounds and primary structure features of proteins.
 
 #### Dependencies
-Matlab >= 2024b was used to construct model for identifying compound-protein interactions.
-Python 
-dhg (https://github.com/Accenture/AmpliGraph) was employed to perform embedded learning for knowledge graph.
-torch (https://github.com/benedekrozemberczki/karateclub) was utilized to perform embedding learning for complex network.
+The source code developed in Python 3.10 using PyTorch 1.13.1+cu117. The required python dependencies are given below. 
+Matlab = 2024b
+pytorch = 1.13.1+cu117
+dgh = 0.9.4
+pandas = 2.3.1
+numpy = 1.23.5
+scipy = 1.15.3
 
 #### Instructions
 (1) Collect compound-protein interaction information, chemical SMILEs and protein sequence data from databases DrugBank and UniprotKB, and calculate molecular fingerprint descriptors and protein primary structure features.
@@ -16,33 +20,8 @@ torch (https://github.com/benedekrozemberczki/karateclub) was utilized to perfor
 (4) Multi-head cross-attention operations are performed on the embedded features of proteins and compounds to obtain fusion features that capture their interaction information. Then, the fusion features are fed into deep neural network model to identify potential compound-protein interactions.  
 
 #### Methods
-AMCF_RDP('D019829','ALBU_HUMAN')
-
-#### 安装教程
-
-1.  xxxx
-2.  xxxx
-3.  xxxx
-
-#### 使用说明
-
-1.  xxxx
-2.  xxxx
-3.  xxxx
-
-#### 参与贡献
-
-1.  Fork 本仓库
-2.  新建 Feat_xxx 分支
-3.  提交代码
-4.  新建 Pull Request
+1. Run HyperGraphVAEDrugEdgeGPU.py
+2. Run HyperGraphVAEProteinEdgeGPU.py
+3. Run CrossAttentionModel.m
 
 
-#### 特技
-
-1.  使用 Readme\_XXX.md 来支持不同的语言，例如 Readme\_en.md, Readme\_zh.md
-2.  Gitee 官方博客 [blog.gitee.com](https://blog.gitee.com)
-3.  你可以 [https://gitee.com/explore](https://gitee.com/explore) 这个地址来了解 Gitee 上的优秀开源项目
-4.  [GVP](https://gitee.com/gvp) 全称是 Gitee 最有价值开源项目，是综合评定出的优秀开源项目
-5.  Gitee 官方提供的使用手册 [https://gitee.com/help](https://gitee.com/help)
-6.  Gitee 封面人物是一档用来展示 Gitee 会员风采的栏目 [https://gitee.com/gitee-stars/](https://gitee.com/gitee-stars/)
