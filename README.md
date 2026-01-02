@@ -17,7 +17,7 @@ scipy = 1.15.3
 (1) Collect compound-protein interaction information, chemical SMILEs and protein sequence data from databases DrugBank and UniprotKB, and calculate molecular fingerprint descriptors and protein primary structure features.
 (2) Construct a hypergraph with compounds as vertices and proteins as hyperedges, and a hypergraph with compounds as hyperedges and proteins as vertices, based on collected compound-protein interaction data. 
 (3) Two hypergraph structures and corresponding vertex feature matrices are input into the improved hypergraph variational autoencoder, and the obtained embedded features are used to represent compounds and proteins, respectively.
-(4) Multi-head cross-attention operations are performed on the embedded features of proteins and compounds to obtain fusion features that capture their interaction information. Then, the fusion features are fed into deep neural network model to identify potential compound-protein interactions.  
+(4) Multi-head cross-attention operations are performed on the embedded features of proteins and compounds to obtain fusion features that capture their interaction information. Then, the fusion features are fed into deep neural network model to identify potential compound-protein interactions. 
 
 #### Methods
 1. Run HyperGraphVAEDrugEdgeGPU.py
