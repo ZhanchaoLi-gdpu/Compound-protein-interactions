@@ -1,5 +1,5 @@
 # Compound-protein interactions
-
+![输入图片说明](FlowChart.png)
 #### Description
 Hypergraph-based dual-channel improved variational autoencoder with cross-attention for compound-protein interactions identification
 This repository contains the PyTorch implementation of framework, as described in our paper "Hypergraph-based dual-channel improved variational autoencoder with cross-attention for compound-protein interactions identification". The framework is a dual-channel hypergraph model with improved variational autoencoder and cross-attention mechanism to identify potential compound-protein interactions. It works on hypergraph, PubChem fingerprint descriptors of compounds and primary structure features of proteins.
