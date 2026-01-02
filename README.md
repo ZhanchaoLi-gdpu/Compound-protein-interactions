@@ -5,13 +5,13 @@ Hypergraph-based dual-channel improved variational autoencoder with cross-attent
 This repository contains the PyTorch implementation of framework, as described in our paper "Hypergraph-based dual-channel improved variational autoencoder with cross-attention for compound-protein interactions identification". The framework is a dual-channel hypergraph model with improved variational autoencoder and cross-attention mechanism to identify potential compound-protein interactions. It works on hypergraph, PubChem fingerprint descriptors of compounds and primary structure features of proteins.
 
 #### Dependencies
-The source code developed in Python 3.10 using PyTorch 1.13.1+cu117. The required python dependencies are given below. 
-Matlab = 2024b
-pytorch = 1.13.1+cu117
-dgh = 0.9.4
-pandas = 2.3.1
-numpy = 1.23.5
-scipy = 1.15.3
+The source code developed in Python 3.10 and Matlab 2024b. The required python dependencies are given below. 
+1. Matlab = 2024b
+2. pytorch = 1.13.1+cu117
+3. dgh = 0.9.4
+4. pandas = 2.3.1
+5. numpy = 1.23.5
+6. scipy = 1.15.3
 
 #### Instructions
 (1) Collect compound-protein interaction information, chemical SMILEs and protein sequence data from databases DrugBank and UniprotKB, and calculate molecular fingerprint descriptors and protein primary structure features.
