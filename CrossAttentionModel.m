@@ -1,7 +1,7 @@
 % clear
 % clc
 
-load('D:\I\HyperGraphCompoundProteinInteractions\DrugBank.V5.1.13\DrugTargetInformation.mat')
+load('...\DrugTargetInformation.mat')
 clear ans DrugName DrugSmiles HyperGraph_ProteinEdge
 clear HyperGraph_DrugEdge TargetSeq
 
