@@ -90,7 +90,7 @@ if __name__ == "__main__":
     # 更高效的邻接矩阵构建
     # hyperedges = [[0, 1, 2], [1, 2, 3], [3, 4], [0, 4]]
     # 读取文件并将每行转换为元组列表
-    with open(r'I:\HyperGraphCompoundProteinInteractions\DrugBank.V5.1.13\DrugBank_DrugEdgeList.txt',
+    with open(r'...\DrugBank_DrugEdgeList.txt',
               'r') as file:  # 替换为你的文件路径
         hyperedges = [
             tuple(map(int, line.strip().split()))
@@ -99,7 +99,7 @@ if __name__ == "__main__":
         ]
     hg = dhg.Hypergraph(n_vertices, hyperedges)
 
-    X = sp.io.loadmat(r'I:\HyperGraphCompoundProteinInteractions\DrugBank.V5.1.13\ProteinSeqFea.mat')
+    X = sp.io.loadmat(r'...\ProteinSeqFea.mat')
     X = X['Feature']
     X = torch.from_numpy(X)  # 将Numpy数组转换为Pytorch张量
     X = X.type(torch.float32)
@@ -137,8 +137,8 @@ print("Mu shape:", mu.shape)      # 应显示[10000, 64]
 print("Logvar shape:", logvar.shape)  # 应显示[10000, 64]
 muprotein = mu.cpu().detach().numpy()
 # 将数组保存为.npy文件
-np.save(r'I:\HyperGraphCompoundProteinInteractions\DrugBank.V5.1.13\muprotein.npy', muprotein)
-sp.io.savemat(r'I:\HyperGraphCompoundProteinInteractions\DrugBank.V5.1.13\muprotein.mat', {'muprotein': muprotein})
+np.save(r'...\muprotein.npy', muprotein)
+sp.io.savemat(r'...\muprotein.mat', {'muprotein': muprotein})
 
 #3. 完整示例：提取并可视化潜在空间‌：
 import matplotlib.pyplot as plt
